@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  git-credential-helper: yes
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Logging in...
+  build:
+    commands:
+      - APP_VERSION=`date "+%Y%m%d-%H%M"`
+      - echo VERSION $APP_VERSION
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'

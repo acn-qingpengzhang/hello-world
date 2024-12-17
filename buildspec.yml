@@ -9,7 +9,7 @@ phases:
       java: corretto11
   pre_build:
     commands:
-      - echo Logging in...8
+      - echo Logging in...9
   build:
     commands:
       - APP_VERSION=`date "+%Y%m%d-%H%M"`
